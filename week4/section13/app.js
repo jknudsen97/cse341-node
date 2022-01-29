@@ -4,7 +4,7 @@ const PATH = process.env.PORT || 5000
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const cors = require('cors') // Place this with other requires (like 'path' and 'express')
+const cors = require('cors'); // Place this with other requires (like 'path' and 'express')
 
 
 const errorController = require('./controllers/error');
@@ -55,8 +55,8 @@ mongoose
     User.findOne().then(user => {
       if (!user) {
         const user = new User({
-          name: 'Max',
-          email: 'max@test.com',
+          name: 'Felix',
+          email: 'felix@test.com',
           cart: {
             items: []
           }
